@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <parent>
+        <artifactId>quarkus-scaffold</artifactId>
+        <groupId>com.yujianyou</groupId>
+        <version>1.0</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>oss</artifactId>
+    <version>1.0</version>
+    <properties>
+        <quarkus-eureka.version>0.0.15</quarkus-eureka.version>
+    </properties>
+    <dependencies>
+        <!--七牛云存储-->
+        <dependency>
+            <groupId>com.qiniu</groupId>
+            <artifactId>qiniu-java-sdk</artifactId>
+            <version>[7.2.0, 7.2.99]</version>
+        </dependency>
+        <!-- 文件上传 -->
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-multipart-provider</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-rest-client</artifactId>
+        </dependency>
+
+
+        <!-- https://github.com/fmcejudo/quarkus-eureka -->
+        <dependency>
+            <groupId>com.github.fmcejudo</groupId>
+            <artifactId>quarkus-eureka</artifactId>
+            <version>${quarkus-eureka.version}</version>
+        </dependency>
+
+        <!-- common -->
+        <dependency>
+            <groupId>com.yujianyou</groupId>
+            <artifactId>common</artifactId>
+            <version>1.0</version>
+            <scope>compile</scope>
+        </dependency>
+
+    </dependencies>
+
+</project>

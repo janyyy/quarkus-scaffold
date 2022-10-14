@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <parent>
+        <artifactId>quarkus-scaffold</artifactId>
+        <groupId>com.yujianyou</groupId>
+        <version>1.0</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>elasticsearch</artifactId>
+    <version>1.0</version>
+    <properties>
+        <quarkus-eureka.version>0.0.15</quarkus-eureka.version>
+    </properties>
+
+    <dependencies>
+
+        <!-- elasticsearch-rest-high-level -->
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-elasticsearch-rest-high-level-client</artifactId>
+        </dependency>
+
+        <!-- rest -->
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-rest-client</artifactId>
+        </dependency>
+
+        <!-- web -->
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-resteasy</artifactId>
+        </dependency>
+        <!-- jackson -->
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-resteasy-jackson</artifactId>
+        </dependency>
+
+        <!-- https://github.com/fmcejudo/quarkus-eureka -->
+        <dependency>
+            <groupId>com.github.fmcejudo</groupId>
+            <artifactId>quarkus-eureka</artifactId>
+            <version>${quarkus-eureka.version}</version>
+        </dependency>
+
+    </dependencies>
+
+</project>

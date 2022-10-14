@@ -1,0 +1,50 @@
+quarkus:
+  rabbitmqclient:
+    virtual-host: jan
+    username: jan
+    password: jan123456
+    addresses:
+      master:
+        hostname: localhost
+        port: 5672
+  eureka:
+    context-path: ${quarkus.http.root-path:/}
+    health-check-url: /info/health
+    home-page-url: /
+    name: ${quarkus.application.name}
+    port: ${quarkus.http.port}
+    prefer-ip-address: true
+    status-page-url: /info/status
+    region: default
+    prefer-same-zone: true
+    #      ignore-network-interfaces: docker0,br-2b644052f6b2
+    service-url:
+      eureka1: http://janyyyy:dev1234@localhost:18089/eureka/
+# IP 本地解析
+ip:
+  local-parsing: true
+parcelReceiveFile:
+  path: D:/Download/zip/
+excel:
+  template:
+    path: D:/Download/template/
+async:
+  task:
+    error:
+      excel:
+        url: D:/Download/error/excel/
+avatar:
+  url: D:/Download/avatar/
+rsa:
+  privateKey: MIIBUwIBADANBgkqhkiG9w0BAQEFAASCAT0wggE5AgEAAkEA0vfvyTdGJkdbHkB8mp0f3FE0GYP3AYPaJF7jUd1M0XxFSE2ceK3k2kw20YvQ09NJKk+OMjWQl9WitG9pB6tSCQIDAQABAkA2SimBrWC2/wvauBuYqjCFwLvYiRYqZKThUS3MZlebXJiLB+Ue/gUifAAKIg1avttUZsHBHrop4qfJCwAI0+YRAiEA+W3NK/RaXtnRqmoUUkb59zsZUBLpvZgQPfj1MhyHDz0CIQDYhsAhPJ3mgS64NbUZmGWuuNKp5coY2GIj/zYDMJp6vQIgUueLFXv/eZ1ekgz2Oi67MNCk5jeTF2BurZqNLR3MSmUCIFT3Q6uHMtsB9Eha4u7hS31tj1UWE+D+ADzp59MGnoftAiBeHT7gDMuqeJHPL4b+kC+gzV4FGTfhR9q3tTbklZkD2A==
+bulk:
+authorization:
+  permit-patterns: /auth/login,/auth/code,/auth/logout,/swagger,/q/,/info/health,/info/status
+mp:
+  jwt:
+    verify:
+      publickey:
+        location: publicKey.pem
+      issuer: https://yujianyou.com
+jwt:
+  duration: 604800

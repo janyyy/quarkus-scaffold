@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="common" />
+        <module name="elasticsearch" />
+        <module name="eurake" />
+        <module name="job" />
+        <module name="jasperreports" />
+        <module name="redis" />
+        <module name="oss" />
+        <module name="xxl-job-admin" />
+      </profile>
+      <profile name="Annotation profile for quarkus-scaffold" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$PROJECT_DIR$/../../MavenRepository/org/mapstruct/mapstruct-processor/1.5.2.Final/mapstruct-processor-1.5.2.Final.jar" />
+          <entry name="$PROJECT_DIR$/../../MavenRepository/org/mapstruct/mapstruct/1.5.2.Final/mapstruct-1.5.2.Final.jar" />
+          <entry name="$PROJECT_DIR$/../../MavenRepository/org/projectlombok/lombok/1.18.22/lombok-1.18.22.jar" />
+          <entry name="$PROJECT_DIR$/../../MavenRepository/org/projectlombok/lombok-mapstruct-binding/0.2.0/lombok-mapstruct-binding-0.2.0.jar" />
+        </processorPath>
+        <module name="system" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="common" options="-parameters" />
+      <module name="elasticsearch" options="-parameters" />
+      <module name="eurake" options="-parameters" />
+      <module name="jasperreports" options="-parameters" />
+      <module name="job" options="-parameters" />
+      <module name="oss" options="-parameters" />
+      <module name="quarkus-scaffold" options="" />
+      <module name="redis" options="-parameters" />
+      <module name="system" options="-parameters -parameters" />
+      <module name="xxl-job-admin" options="-parameters" />
+    </option>
+  </component>
+</project>

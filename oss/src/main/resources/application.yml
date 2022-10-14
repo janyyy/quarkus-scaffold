@@ -1,0 +1,10 @@
+quarkus:
+  package:
+    type: uber-jar
+  application:
+    name: oss
+    version: 1.0
+  http:
+    port: 8004
+  profile: dev
+

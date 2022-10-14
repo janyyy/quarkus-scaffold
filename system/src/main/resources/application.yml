@@ -1,0 +1,13 @@
+quarkus:
+  package:
+    type: uber-jar
+  application:
+    name: system
+    version: 1.0
+  http:
+    port: 8000
+  swagger-ui:
+    enable: false
+  smallrye-openapi:
+    enable: false
+  profile: dev

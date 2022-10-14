@@ -1,0 +1,13 @@
+quarkus:
+  eureka:
+    context-path: ${quarkus.http.root-path:/}
+    health-check-url: /info/health
+    home-page-url: /
+    name: ${quarkus.application.name}
+    port: ${quarkus.http.port}
+    prefer-ip-address: false
+    status-page-url: /info/status
+    region: default
+    prefer-same-zone: true
+    service-url:
+      eureka1: http://janyyyy:dev1234@localhost:18089/eureka/

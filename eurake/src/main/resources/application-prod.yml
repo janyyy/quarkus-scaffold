@@ -1,0 +1,9 @@
+server:
+  port: 18089
+eureka:
+  client:
+    register-with-eureka: false #自己也注册到注册中心
+    fetch-registry: false #需要从其他eureka节点获取注册信息
+    service-url:
+      defaultZone: http://localhost:18089/eureka/
+

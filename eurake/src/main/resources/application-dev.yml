@@ -1,0 +1,11 @@
+server:
+  port: 18089
+eureka:
+  client:
+    # 指示此实例是否应将其信息注册到eureka服务器以供其他服务发现，默认为false
+    register-with-eureka: false
+    # 客户端是否获取eureka服务器注册表上的注册信息，默认为true
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:18089/eureka/
+

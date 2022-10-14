@@ -1,0 +1,9 @@
+quarkus:
+  package:
+    type: uber-jar
+  application:
+    name: jasperreports
+    version: 1.0
+  http:
+    port: 8002
+  profile: dev

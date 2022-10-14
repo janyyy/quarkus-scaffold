@@ -1,0 +1,9 @@
+quarkus:
+  application:
+    name: redis
+    version: 1.0
+  http:
+    port: 8005
+  package:
+    type: uber-jar
+  profile: dev

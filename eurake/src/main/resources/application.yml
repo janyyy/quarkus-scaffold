@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: eureka
+  profiles:
+    active: 'dev'
+  security:
+    user:
+      name: janyyyy
+      password: dev1234
+eureka:
+  server:
+    # 启用自我保护机制，默认为true
+    enable-self-preservation: true
+    # 清除无效服务实例的时间间隔（ms），默认1分钟
+    eviction-interval-timer-in-ms: 3000
+  dashboard:
+    #是否启用控制台
+    enabled: true
+  instance:
+    # 该服务实例在注册中心的唯一实例ID
+    instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
+    metadata-map:
+      user:
+        name: ${spring.security.user.name}
+        password: ${spring.security.user.password}
+    # 是否优先使用服务实例的IP地址，相较于hostname
+    prefer-ip-address: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
+logging:
+  level:
+    com:
+      netflix: warn
