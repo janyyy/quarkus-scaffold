@@ -1,9 +1,41 @@
-quarkus:
-  package:
-    type: uber-jar
-  application:
-    name: job
-    version: 1.0
-  http:
-    port: 8003
-  profile: dev
+# dev
+'%dev':
+  quarkus:
+    package:
+      type: uber-jar
+    application:
+      name: job
+      version: 1.0
+    http:
+      port: 8003
+    arc:
+      # 无论应用程序 bean 是否未使用，它们都不会被删除
+      #      remove-unused-beans: framework
+      unremovable-types: com.xxl.**,com.yujianyou.**,com.fmcejudo.**
+    #     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    eureka:
+      context-path: ${quarkus.http.root-path:/}
+      health-check-url: /info/health
+      home-page-url: /
+      name: ${quarkus.application.name}
+      port: ${quarkus.http.port}
+      prefer-ip-address: true
+      status-page-url: /info/status
+      region: default
+      prefer-same-zone: true
+      service-url:
+        eureka1: http://janyyyy:dev1234@localhost:18089/eureka/
+  xxl:
+    job:
+      admin:
+        addresses: http://localhost:18082/janyyyy-job-admin
+      accessToken: 0c2acc9e-168c-4fba-b014-82daf96daac4
+      executor:
+        appname: janyyyy-job-executor
+        address:
+        ip:
+        port: 9999
+        logpath: /home/dev/xxl-job/jobhandler
+        logretentiondays: 30
+  
+  

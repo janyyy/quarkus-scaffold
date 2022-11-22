@@ -1,9 +1,28 @@
-quarkus:
-  application:
-    name: redis
-    version: 1.0
-  http:
-    port: 8005
-  package:
-    type: uber-jar
-  profile: dev
+# dev
+'%dev':
+  quarkus:
+    application:
+      name: redis
+      version: 1.0
+    http:
+      port: 8005
+    package:
+      type: uber-jar
+    redis:
+      hosts: redis://localhost:6379/3
+      password: dev
+      timeout: 5000
+      tcp-keep-alive: true
+    eureka:
+      context-path: ${quarkus.http.root-path:/}
+      health-check-url: /info/health
+      home-page-url: /
+      name: ${quarkus.application.name}
+      port: ${quarkus.http.port}
+      prefer-ip-address: true
+      status-page-url: /info/status
+      region: default
+      prefer-same-zone: true
+      service-url:
+        eureka1: http://janyyyy:dev1234@localhost:18089/eureka/
+

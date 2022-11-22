@@ -1,2 +1,22 @@
-quarkus:
-  profile: dev
+# dev
+'%dev':
+  quarkus:
+    datasource:
+      db-kind: postgresql
+      jdbc:
+        max-size: 20
+        extended-leak-report: true
+        url: jdbc:postgresql://localhost:5432/system
+      username: postgres
+      password: postgres
+    hibernate-orm:
+      database:
+        generation: none
+      datasource: <default>
+      packages: com.yujianyou.entity
+    mybatis:
+      map-underscore-to-camel-case: true
+      use-generated-keys: true
+      mapper-locations: mapper
+      # 开启Mybatis日志打印
+      log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
