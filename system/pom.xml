@@ -15,7 +15,7 @@
     <properties>
         <compiler-plugin.version>3.8.1</compiler-plugin.version>
         <maven.compiler.parameters>true</maven.compiler.parameters>
-        <lombok.version>1.18.22</lombok.version>
+        <lombok.version>1.18.24</lombok.version>
         <captcha.version>1.6.2</captcha.version>
         <mapstruct.version>1.5.2.Final</mapstruct.version>
         <quarkus-eureka.version>0.0.15</quarkus-eureka.version>

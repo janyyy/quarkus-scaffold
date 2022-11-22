@@ -50,8 +50,7 @@ public class RedisServiceImpl implements RedisService {
                     // 时间不为空时，设置Key过期时间
                     if (ObjectUtil.isNotNull(time)) {
                         reactiveRedisClient.expire(key, time.toString()).subscribe().with(
-                                res -> {
-                                },
+                                res -> log.info("调用SET成功"),
                                 fail -> log.error("调用expire方法异常，异常信息为：", fail)
                         );
                     }

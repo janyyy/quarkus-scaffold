@@ -10,7 +10,7 @@
       type: uber-jar
     redis:
       hosts: redis://localhost:6379/3
-      password: dev
+#      password: dev
       timeout: 5000
       tcp-keep-alive: true
     eureka:

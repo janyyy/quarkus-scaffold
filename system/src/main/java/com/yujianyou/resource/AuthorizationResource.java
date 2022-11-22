@@ -68,6 +68,7 @@ public class AuthorizationResource {
     @Inject
     JsonWebToken jwt;
 
+
     @GET
     @Path("/code")
     @Operation(summary = "获取验证码信息")
@@ -81,9 +82,9 @@ public class AuthorizationResource {
             captchaValue = captchaValue.split("\\.")[0];
         }
         RedisDto redisDto = new RedisDto();
-        redisDto.key = uuid;
-        redisDto.value = captchaValue;
-        redisDto.time = loginProperties.getLoginCode().getExpiration();
+        redisDto.setKey(uuid);
+        redisDto.setValue(captchaValue);
+        redisDto.setTime(loginProperties.getLoginCode().getExpiration());
         redisService.set(redisDto);
         // 验证码信息
         Map<String, Object> imgResult = new HashMap<>(2) {{

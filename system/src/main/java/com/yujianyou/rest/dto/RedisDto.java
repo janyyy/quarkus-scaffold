@@ -1,5 +1,7 @@
 package com.yujianyou.rest.dto;
 
+import lombok.Data;
+
 import javax.ws.rs.QueryParam;
 
 /**
@@ -8,54 +10,55 @@ import javax.ws.rs.QueryParam;
  * @email 597907730@qq.com
  */
 
+@Data
 public class RedisDto {
 
     /**
      * set 方法参数
      */
     @QueryParam("key")
-    public String key;
+    private String key;
 
     @QueryParam("value")
-    public String value;
+    private String value;
 
     @QueryParam("time")
-    public Long time;
+    private Long time;
 
     /**
      * rename 方法参数
      */
     @QueryParam("oldKey")
-    public String oldKey;
+    private String oldKey;
 
     @QueryParam("newKey")
-    public String newKey;
+    private String newKey;
     /**
      * getRange 方法参数
      */
     @QueryParam("start")
-    public String start;
+    private String start;
 
     @QueryParam("end")
-    public String end;
+    private String end;
 
     @QueryParam("offset")
-    public long offset;
+    private Long offset;
 
     @QueryParam("timeout")
-    public long timeout;
+    private Long timeout;
 
     @QueryParam("increment")
-    public long increment;
+    private Long increment;
 
     @QueryParam("incrementDouble")
-    public double incrementDouble;
+    private Double incrementDouble;
 
     @QueryParam("field")
-    public String field;
+    private String field;
 
     @QueryParam("delta")
-    public double delta;
+    private Double delta;
 
 
 }
