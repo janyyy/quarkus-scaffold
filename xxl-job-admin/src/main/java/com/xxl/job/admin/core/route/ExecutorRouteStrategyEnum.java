@@ -30,7 +30,6 @@ public enum ExecutorRouteStrategyEnum {
     public String getTitle() {
         return title;
     }
-
     public ExecutorRouter getRouter() {
         return router;
     }

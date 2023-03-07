@@ -22,7 +22,6 @@ public class JacksonUtil {
     private static Logger logger = LoggerFactory.getLogger(JacksonUtil.class);
 
     private final static ObjectMapper objectMapper = new ObjectMapper();
-
     public static ObjectMapper getInstance() {
         return objectMapper;
     }

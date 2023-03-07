@@ -12,8 +12,8 @@
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        <quarkus-mybatis-plus.version>1.0.4</quarkus-mybatis-plus.version>
-        <excel.version>4.3.0.RC2</excel.version>
+        <quarkus-mybatis-plus.version>1.0.6</quarkus-mybatis-plus.version>
+        <excel.version>4.3.0.RC3</excel.version>
     </properties>
 
     <dependencies>

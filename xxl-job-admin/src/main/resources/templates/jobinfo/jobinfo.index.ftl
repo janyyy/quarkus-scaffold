@@ -220,7 +220,7 @@
                         <div class="col-sm-10">
                             <textarea class="textarea form-control" name="executorParam"
                                       placeholder="${I18n.system_please_input}${I18n.jobinfo_field_executorparam}"
-                                      maxlength="512" style="height: 63px; line-height: 1.2;"></textarea>
+                                      maxlength="10000" style="height: 63px; line-height: 1.2;"></textarea>
                         </div>
                     </div>
 
@@ -298,10 +298,10 @@
                     <input type="hidden" name="glueRemark" value="GLUE代码初始化">
                     <textarea name="glueSource" style="display:none;"></textarea>
                     <textarea class="glueSource_java" style="display:none;">
-package com.xxl.job.service.handler;
+package com.xxl.job.com.xxl.job.admin.service.handler;
 
-import com.xxl.job.core.context.XxlJobHelper;
-import com.xxl.job.core.handler.IJobHandler;
+import com.xxl.job.com.xxl.job.admin.core.context.XxlJobHelper;
+import com.xxl.job.com.xxl.job.admin.core.handler.IJobHandler;
 
 public class DemoGlueJobHandler extends IJobHandler {
 
@@ -514,7 +514,7 @@ exit 0
                         <div class="col-sm-10">
                             <textarea class="textarea form-control" name="executorParam"
                                       placeholder="${I18n.system_please_input}${I18n.jobinfo_field_executorparam}"
-                                      maxlength="512" style="height: 63px; line-height: 1.2;"></textarea>
+                                      maxlength="10000" style="height: 63px; line-height: 1.2;"></textarea>
                         </div>
                     </div>
 
@@ -611,7 +611,7 @@ exit 0
                         <div class="col-sm-10">
                             <textarea class="textarea form-control" name="executorParam"
                                       placeholder="${I18n.system_please_input}${I18n.jobinfo_field_executorparam}"
-                                      maxlength="512" style="height: 63px; line-height: 1.2;"></textarea>
+                                      maxlength="10000" style="height: 63px; line-height: 1.2;"></textarea>
                         </div>
                     </div>
                     <div class="form-group">

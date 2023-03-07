@@ -23,7 +23,6 @@ public class ExecutorRouteConsistentHash extends ExecutorRouter {
 
     /**
      * get hash code on 2^32 ring (md5散列的方式计算hash值)
-     *
      * @param key
      * @return
      */

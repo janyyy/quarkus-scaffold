@@ -127,7 +127,6 @@ public class JobTriggerPoolHelper {
     public static void toStart() {
         helper.start();
     }
-
     public static void toStop() {
         helper.stop();
     }

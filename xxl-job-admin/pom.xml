@@ -2,8 +2,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>sengi-s1</artifactId>
-        <groupId>com.sengi</groupId>
+        <groupId>com.yujianyou</groupId>
+        <artifactId>quarkus-scaffold</artifactId>
         <version>1.0</version>
     </parent>
     <artifactId>xxl-job-admin</artifactId>
@@ -12,8 +12,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
         <maven.test.skip>true</maven.test.skip>
 
         <netty-all.version>4.1.63.Final</netty-all.version>
@@ -23,10 +23,10 @@
         <spring-boot.version>2.6.7</spring-boot.version>
 
         <mybatis-spring-boot-starter.version>2.2.2</mybatis-spring-boot-starter.version>
-        <postgresql-connector-java.version>42.5.0</postgresql-connector-java.version>
+        <mysql-connector-java.version>8.0.29</mysql-connector-java.version>
 
         <slf4j-api.version>1.7.36</slf4j-api.version>
-        <junit.version>5.8.2</junit.version>
+        <junit-jupiter.version>5.8.2</junit-jupiter.version>
         <javax.annotation-api.version>1.3.2</javax.annotation-api.version>
 
         <groovy.version>3.0.10</groovy.version>
@@ -34,7 +34,6 @@
         <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
         <maven-javadoc-plugin.version>3.4.0</maven-javadoc-plugin.version>
         <maven-gpg-plugin.version>3.0.1</maven-gpg-plugin.version>
-        <maven-war-plugin.version>3.3.1</maven-war-plugin.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -100,11 +99,11 @@
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
-            <version>${postgresql-connector-java.version}</version>
+            <version>42.5.1</version>
             <scope>runtime</scope>
         </dependency>
 
-        <!-- xxl-job-core -->
+        <!-- xxl-job-com.xxl.job.admin.core -->
         <dependency>
             <groupId>com.xuxueli</groupId>
             <artifactId>xxl-job-core</artifactId>

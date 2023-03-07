@@ -156,7 +156,7 @@ public class JobLogController {
             logger.error(e.getMessage(), e);
             return new ReturnT<LogResult>(ReturnT.FAIL_CODE, e.getMessage());
         }
-    }
+	}
 
     @RequestMapping("/logKill")
     @ResponseBody
@@ -190,7 +190,7 @@ public class JobLogController {
         } else {
             return new ReturnT<String>(500, runResult.getMsg());
         }
-    }
+	}
 
     @RequestMapping("/clearLog")
     @ResponseBody
@@ -229,6 +229,6 @@ public class JobLogController {
         } while (logIds != null && logIds.size() > 0);
 
         return ReturnT.SUCCESS;
-    }
+	}
 
 }

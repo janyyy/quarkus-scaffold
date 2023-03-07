@@ -20,7 +20,6 @@ public class JobLogReportHelper {
     private static Logger logger = LoggerFactory.getLogger(JobLogReportHelper.class);
 
     private static JobLogReportHelper instance = new JobLogReportHelper();
-
     public static JobLogReportHelper getInstance() {
         return instance;
     }

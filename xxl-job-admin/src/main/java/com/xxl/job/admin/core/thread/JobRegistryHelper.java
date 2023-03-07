@@ -172,7 +172,7 @@ public class JobRegistryHelper {
         });
 
         return ReturnT.SUCCESS;
-    }
+	}
 
     public ReturnT<String> registryRemove(RegistryParam registryParam) {
 

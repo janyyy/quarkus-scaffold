@@ -23,7 +23,6 @@ public class I18nUtil {
     private static Logger logger = LoggerFactory.getLogger(I18nUtil.class);
 
     private static Properties prop = null;
-
     public static Properties loadI18nProp() {
         if (prop != null) {
             return prop;
