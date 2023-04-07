@@ -12,14 +12,14 @@
       enable: false
     smallrye-openapi:
       enable: false
-    rabbitmqclient:
-      virtual-host: jan
-      username: jan
-      password: jan123456
-      addresses:
-        master:
-          hostname: localhost
-          port: 5672
+#    rabbitmqclient:
+#      virtual-host: jan
+#      username: jan
+#      password: jan123456
+#      addresses:
+#        master:
+#          hostname: localhost
+#          port: 5672
     eureka:
       context-path: ${quarkus.http.root-path:/}
       health-check-url: /info/health
@@ -30,7 +30,6 @@
       status-page-url: /info/status
       region: default
       prefer-same-zone: true
-      #      ignore-network-interfaces: docker0,br-2b644052f6b2
       service-url:
         eureka1: http://janyyyy:dev1234@localhost:18089/eureka/
   # IP 本地解析

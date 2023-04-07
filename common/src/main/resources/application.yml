@@ -6,9 +6,9 @@
       jdbc:
         max-size: 20
         extended-leak-report: true
-        url: jdbc:postgresql://localhost:5432/system
-      username: postgres
-      password: postgres
+        url: jdbc:postgresql://bj-pg.vaedzy.com:29874/hispread_gpt
+      username: root
+      password: ZhiforCloud0719.
     hibernate-orm:
       database:
         generation: none
