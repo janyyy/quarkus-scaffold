@@ -13,7 +13,7 @@
     <artifactId>oss</artifactId>
     <version>1.0</version>
     <properties>
-        <quarkus-eureka.version>0.0.15</quarkus-eureka.version>
+        <quarkus-eureka.version>0.0.14</quarkus-eureka.version>
     </properties>
     <dependencies>
         <!--七牛云存储-->
