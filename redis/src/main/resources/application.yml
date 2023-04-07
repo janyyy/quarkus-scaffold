@@ -10,7 +10,7 @@
       type: uber-jar
     redis:
       hosts: redis://localhost:6379/3
-#      password: dev
+      password: foobared
       timeout: 5000
       tcp-keep-alive: true
     eureka:
@@ -19,7 +19,7 @@
       home-page-url: /
       name: ${quarkus.application.name}
       port: ${quarkus.http.port}
-      prefer-ip-address: true
+      prefer-ip-address: false
       status-page-url: /info/status
       region: default
       prefer-same-zone: true

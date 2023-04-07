@@ -195,7 +195,7 @@ public class MenuServiceImpl implements MenuService {
     @Override
     public List<MenuDto> findMenuByUserName(String username) {
         User user = userService.findCurrentUser(username);
-        String sql = "select DISTINCT * from system.sys_menu t1 left join system.sys_roles_menus t2 on t1.menu_id = t2.menu_id left join system.sys_users_roles t3 on t2.role_id = t3.role_id where t3.user_id =? and t1.hidden = false and t1.type != 2 order by t1.menu_sort asc";
+        String sql = "select * from system.sys_menu t1 left join system.sys_roles_menus t2 on t1.menu_id = t2.menu_id left join system.sys_users_roles t3 on t2.role_id = t3.role_id where t3.user_id =? and t1.hidden = false and t1.type != 2 order by t1.menu_sort asc";
         List<Menu> list = entityManager.createNativeQuery(sql, Menu.class).setParameter(1, user.getId()).getResultList();
         return menuMapper.toDto(list);
     }

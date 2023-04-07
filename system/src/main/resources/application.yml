@@ -26,7 +26,7 @@
       home-page-url: /
       name: ${quarkus.application.name}
       port: ${quarkus.http.port}
-      prefer-ip-address: true
+      prefer-ip-address: false
       status-page-url: /info/status
       region: default
       prefer-same-zone: true
