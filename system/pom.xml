@@ -21,11 +21,19 @@
         <quarkus-eureka.version>0.0.15</quarkus-eureka.version>
         <javax.mail.version>1.6.2</javax.mail.version>
         <freemarker.version>0.3.0</freemarker.version>
+        <netty-socketio.version>1.7.23</netty-socketio.version>
         <jsch.version>0.1.72</jsch.version>
         <ip2region.version>1.7.2</ip2region.version>
         <yauaa.version>5.23</yauaa.version>
     </properties>
     <dependencies>
+
+        <dependency>
+            <groupId>com.corundumstudio.socketio</groupId>
+            <artifactId>netty-socketio</artifactId>
+            <version>${netty-socketio.version}</version>
+        </dependency>
+
         <!-- common -->
         <dependency>
             <groupId>com.yujianyou</groupId>
