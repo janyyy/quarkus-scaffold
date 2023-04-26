@@ -130,22 +130,31 @@ public class JobLogController {
 
         model.addAttribute("triggerCode", jobLog.getTriggerCode());
         model.addAttribute("handleCode", jobLog.getHandleCode());
-        model.addAttribute("executorAddress", jobLog.getExecutorAddress());
-        model.addAttribute("triggerTime", jobLog.getTriggerTime().getTime());
+//        model.addAttribute("executorAddress", jobLog.getExecutorAddress());
+//        model.addAttribute("triggerTime", jobLog.getTriggerTime().getTime());
         model.addAttribute("logId", jobLog.getId());
         return "joblog/joblog.detail";
     }
 
     @RequestMapping("/logDetailCat")
     @ResponseBody
-    public ReturnT<LogResult> logDetailCat(String executorAddress, long triggerTime, long logId, int fromLineNum) {
+    public ReturnT<LogResult> logDetailCat(long logId, int fromLineNum) {
         try {
-            ExecutorBiz executorBiz = XxlJobScheduler.getExecutorBiz(executorAddress);
-            ReturnT<LogResult> logResult = executorBiz.log(new LogParam(triggerTime, logId, fromLineNum));
+//            ExecutorBiz executorBiz = XxlJobScheduler.getExecutorBiz(executorAddress);
+//            ReturnT<LogResult> logResult = executorBiz.log(new LogParam(triggerTime, logId, fromLineNum));
+            // valid
+            XxlJobLog jobLog = xxlJobLogDao.load(logId);    // todo, need to improve performance
+            if (jobLog == null) {
+                return new ReturnT<LogResult>(ReturnT.FAIL_CODE, I18nUtil.getString("joblog_logid_unvalid"));
+            }
+
+            // log cat
+            ExecutorBiz executorBiz = XxlJobScheduler.getExecutorBiz(jobLog.getExecutorAddress());
+            ReturnT<LogResult> logResult = executorBiz.log(new LogParam(jobLog.getTriggerTime().getTime(), logId, fromLineNum));
 
             // is end
             if (logResult.getContent() != null && logResult.getContent().getFromLineNum() > logResult.getContent().getToLineNum()) {
-                XxlJobLog jobLog = xxlJobLogDao.load(logId);
+//                XxlJobLog jobLog = xxlJobLogDao.load(logId);
                 if (jobLog.getHandleCode() > 0) {
                     logResult.getContent().setEnd(true);
                 }
@@ -156,7 +165,7 @@ public class JobLogController {
             logger.error(e.getMessage(), e);
             return new ReturnT<LogResult>(ReturnT.FAIL_CODE, e.getMessage());
         }
-	}
+    }
 
     @RequestMapping("/logKill")
     @ResponseBody
@@ -190,7 +199,7 @@ public class JobLogController {
         } else {
             return new ReturnT<String>(500, runResult.getMsg());
         }
-	}
+    }
 
     @RequestMapping("/clearLog")
     @ResponseBody
@@ -229,6 +238,6 @@ public class JobLogController {
         } while (logIds != null && logIds.size() > 0);
 
         return ReturnT.SUCCESS;
-	}
+    }
 
 }
